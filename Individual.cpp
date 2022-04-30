@@ -48,7 +48,7 @@ int Individual::subGetMax(int pos){
 int Individual::getMaxOnes(){ 
     int currentMax = 0; 
     for(int i = 0; i < this->binaryString.size(); i++){
-        if(this->binaryString.at(i) == '0') {
+        if(this->binaryString.at(i) != '1') {
             continue; 
         }
         int max = this->subGetMax(i); 
