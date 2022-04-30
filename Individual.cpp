@@ -18,7 +18,6 @@ std::string Individual::getString(){
 }
 
 int Individual::getBit(int pos){ 
-    pos -= 1; 
     if (pos < 0 || pos >= this->binaryString.size()) {
         return -1; 
     }
@@ -26,10 +25,12 @@ int Individual::getBit(int pos){
 }
 
 void Individual::flipBit(int pos){
-    if (this->binaryString.at(pos-1) == '0'){
-        this->binaryString.at(pos-1) = '1';
+    if (this->binaryString.at(pos) == '0'){
+        this->binaryString.at(pos) = '1';
     }
-    else this->binaryString.at(pos-1) = '0'; 
+    else if (this->binaryString.at(pos) == '1') {
+        this->binaryString.at(pos) = '0'; 
+    }
 }
 
 int Individual::getLength(){
