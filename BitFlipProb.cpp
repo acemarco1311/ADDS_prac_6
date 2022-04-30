@@ -34,7 +34,7 @@ bool BitFlipProb::determine_flip(){
 Individual BitFlipProb::mutate(Individual dna, int k){
     for(int i = 0; i < dna.getLength(); i++){
         if (determine_flip() == true) {
-            dna.flipBit(i); 
+            dna.flipBit(i+1); 
         }
     }
     return dna; 
