@@ -1,12 +1,6 @@
 #include "Rearrange.h" 
 
-Rearrange::Rearrange(){
 
-}
-
-Rearrange::~Rearrange(){
-
-}
 
 Individual Rearrange::mutate(Individual dna, int k){ 
     int pos = k - 1; 

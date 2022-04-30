@@ -4,8 +4,6 @@
 
 class Mutator{ 
     public: virtual Individual mutate(Individual dna, int k) = 0;
-            Mutator(); 
-            ~Mutator(); 
 }; 
 
 

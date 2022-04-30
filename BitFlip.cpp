@@ -1,10 +1,5 @@
 #include "BitFlip.h" 
 
-BitFlip::BitFlip(){
-
-}
-
-BitFlip::~BitFlip(){} 
 
 Individual BitFlip::mutate(Individual dna, int k){ 
     if (k < 0) return dna; 

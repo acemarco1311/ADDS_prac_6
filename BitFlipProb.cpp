@@ -8,7 +8,6 @@ BitFlipProb::BitFlipProb(double p){
     this->probability = p; 
 }
  
-BitFlipProb::~BitFlipProb(){}
 
 bool BitFlipProb::determine_flip(){ 
     if(this->probability == 0) return false; 
