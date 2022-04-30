@@ -25,11 +25,11 @@ int Individual::getBit(int pos){
 }
 
 void Individual::flipBit(int pos){
-    if (this->binaryString.at(pos) == '0'){
-        this->binaryString.at(pos) = '1';
+    if (this->binaryString.at(pos-1 ) == '0'){
+        this->binaryString.at(pos-1) = '1';
     }
-    else if (this->binaryString.at(pos) == '1') {
-        this->binaryString.at(pos) = '0'; 
+    else if (this->binaryString.at(pos-1) == '1') {
+        this->binaryString.at(pos-1) = '0'; 
     }
 }
 
