@@ -3,7 +3,7 @@
 
 
 Individual Rearrange::mutate(Individual dna, int k){ 
-    int pos = k - 1; 
+    int pos = (k-1) % dna.getLength(); 
     std::string start = dna.getString().substr(pos); 
     std::string end = dna.getString().substr(0, pos); 
     std::string mutated = start + end; 
