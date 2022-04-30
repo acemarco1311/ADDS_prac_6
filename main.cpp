@@ -14,7 +14,6 @@ Individual* execute(Individual* indPtr, Mutator* mPtr, int k){
 int main(){
     std::string input; 
     std::getline(std::cin, input); 
-    std::cout << input << std::endl;
     std::string first_input = input.substr(0, input.find(" ")); 
     int k1 = std::stoi(input.substr(input.find(" ") + 1, 1)); 
     int k2 = std::stoi(input.substr(input.size() - 1, 1)); 
