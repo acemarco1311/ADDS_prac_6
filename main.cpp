@@ -15,13 +15,12 @@ int main(){
     std::string input; 
     std::getline(std::cin, input); 
     std::string first_input = input.substr(0, input.find(" ")); 
-    int k1 = std::stoi(input.substr(input.find(" ") + 1, 1)); 
-    int k2 = std::stoi(input.substr(input.size() - 1, 1)); 
     size_t first_space_pos = input.find(" "); 
     size_t second_space_pos = input.find(" ", first_space_pos + 1); 
     size_t third_space_pos= input.find(" ", second_space_pos + 1); 
     std::string second_input = input.substr(second_space_pos + 1, third_space_pos - (second_space_pos + 1) ); 
-
+    int k1 = std::stoi(input.substr(first_space_pos + 1, second_space_pos - (first_space_pos + 1))); 
+    int k2 = std::stoi(input.substr(third_space_pos + 1)); 
     Individual* first = new Individual(first_input); 
     Individual* second = new Individual(second_input);  
     BitFlip* bit_flip = new BitFlip(); 

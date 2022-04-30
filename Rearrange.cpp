@@ -11,8 +11,12 @@ Individual Rearrange::mutate(Individual dna, int k){
         Individual copy = Individual(mutated); 
         return copy; 
     }
-    int pos = k % dna.getLength(); 
-    pos -= 1; 
+    int pos; 
+    if(k % dna.getLength() == 0) pos = dna.getLength() - 1; 
+    else{
+        pos = k % dna.getLength(); 
+        pos -= 1; 
+    }
     std::string start = dna.getString().substr(pos); 
     std::string end = dna.getString().substr(0, pos); 
     std::string mutated = start + end; 
