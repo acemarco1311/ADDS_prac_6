@@ -18,6 +18,7 @@ std::string Individual::getString(){
 }
 
 int Individual::getBit(int pos){ 
+    pos -= 1; 
     if (pos < 0 || pos >= this->binaryString.size()) {
         return -1; 
     }
