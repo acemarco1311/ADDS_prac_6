@@ -21,7 +21,7 @@ int Individual::getBit(int pos){
     if (pos < 0 || pos >= this->binaryString.size()) {
         return -1; 
     }
-    return (int)this->binaryString.at(pos); 
+    return (int)this->binaryString.at(pos-1); 
 }
 
 void Individual::flipBit(int pos){
