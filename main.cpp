@@ -5,7 +5,10 @@
 #include "Rearrange.h" 
 #include "BitFlip.h" 
 Individual* execute(Individual* indPtr, Mutator* mPtr, int k){ 
-    return mPtr->mutate(indPtr, k); 
+    Individual temp_indi = Individual(indPtr->getString()); 
+    Individual new_temp = mPtr->mutate(temp_indi, k); 
+    Individual* final_indi = new Individual(new_temp.getString()); 
+    return final_indi ; 
 }
 
 int main(){
