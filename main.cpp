@@ -12,10 +12,33 @@ Individual* execute(Individual* indPtr, Mutator* mPtr, int k){
 }
 
 int main(){
-    std::string binary_string = "100101011101111111111"; 
-    Individual* test = new Individual(binary_string); 
-    Mutator* test_flip_prob= new BitFlipProb(0.5324); 
-    Mutator* test_flip = new BitFlip(); 
-    Mutator* test_rearrange = new Rearrange();  
+    std::string input; 
+    std::getline(std::cin, input); 
+    std::cout << input << std::endl;
+    std::string first_input = input.substr(0, input.find(" ")); 
+    int k1 = std::stoi(input.substr(input.find(" ") + 1, 1)); 
+    int k2 = std::stoi(input.substr(input.size() - 1, 1)); 
+    size_t first_space_pos = input.find(" "); 
+    size_t second_space_pos = input.find(" ", first_space_pos + 1); 
+    size_t third_space_pos= input.find(" ", second_space_pos + 1); 
+    std::string second_input = input.substr(second_space_pos + 1, third_space_pos - (second_space_pos + 1) ); 
+    std::cout << first_input << std::endl; 
+    std::cout << k1 << std::endl; 
+    std::cout << k2 << std::endl; 
+    std::cout << second_input << std::endl; 
+
+    Individual* first = new Individual(first_input); 
+    Individual* second = new Individual(second_input);  
+    BitFlip* bit_flip = new BitFlip(); 
+    Individual* first_result = execute(first, bit_flip, k1); 
+    Rearrange* rearrange = new Rearrange(); 
+    Individual* second_result = execute(second, rearrange, k2); 
+    std::string output = ""; 
+    output += first_result->getString(); 
+    output += " "; 
+    output += second_result->getString(); 
+    output += " "; 
+    output += std::to_string(second_result->getMaxOnes()); 
+    std::cout << output << std::endl; 
     return 0; 
 }
