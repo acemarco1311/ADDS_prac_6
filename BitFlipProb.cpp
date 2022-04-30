@@ -32,10 +32,10 @@ bool BitFlipProb::determine_flip(){
 }
 
 
-Individual* BitFlipProb::mutate(Individual* dna, int k){
-    for(int i = 0; i < dna->getLength(); i++){
-        if (this->determine_flip() == true) {
-            dna->flipBit(i); 
+Individual BitFlipProb::mutate(Individual dna, int k){
+    for(int i = 0; i < dna.getLength(); i++){
+        if (determine_flip() == true) {
+            dna.flipBit(i); 
         }
     }
     return dna; 

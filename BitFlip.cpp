@@ -6,9 +6,9 @@ BitFlip::BitFlip(){
 
 BitFlip::~BitFlip(){} 
 
-Individual* BitFlip::mutate(Individual* dna, int k){ 
+Individual BitFlip::mutate(Individual dna, int k){ 
     if (k < 0) return dna; 
-    int pos = k % dna->getLength(); 
-    dna->flipBit(pos); 
+    int pos = k % dna.getLength(); 
+    dna.flipBit(pos); 
     return dna;
 }

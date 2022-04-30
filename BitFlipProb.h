@@ -5,7 +5,7 @@
 class BitFlipProb : public Mutator{
     public: BitFlipProb(double p); 
             ~BitFlipProb(); 
-            Individual* mutate(Individual* dna, int k); 
+            Individual mutate(Individual dna, int k); 
             bool determine_flip(); 
     private: double probability; 
 }; 

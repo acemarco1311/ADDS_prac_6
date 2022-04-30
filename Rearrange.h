@@ -5,7 +5,7 @@
 class Rearrange : public Mutator{
     public: Rearrange(); 
             ~Rearrange(); 
-            Individual* mutate(Individual* dna, int k); 
+            Individual mutate(Individual dna, int k); 
 };
 
 

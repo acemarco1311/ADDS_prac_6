@@ -3,7 +3,7 @@
 #define BITFLIP_H
 
 class BitFlip : public Mutator{
-    public: Individual* mutate(Individual* dna, int k); 
+    public: Individual mutate(Individual dna, int k); 
             BitFlip(); 
             ~BitFlip(); 
 }; 
