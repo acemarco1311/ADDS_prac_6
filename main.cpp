@@ -22,10 +22,6 @@ int main(){
     size_t second_space_pos = input.find(" ", first_space_pos + 1); 
     size_t third_space_pos= input.find(" ", second_space_pos + 1); 
     std::string second_input = input.substr(second_space_pos + 1, third_space_pos - (second_space_pos + 1) ); 
-    std::cout << first_input << std::endl; 
-    std::cout << k1 << std::endl; 
-    std::cout << k2 << std::endl; 
-    std::cout << second_input << std::endl; 
 
     Individual* first = new Individual(first_input); 
     Individual* second = new Individual(second_input);  
